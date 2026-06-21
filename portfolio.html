@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Gallery | Nexus Data Collective</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dot-pattern {
+            background-image: radial-gradient(circle, #1E293B 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#d4e4fa",
+                        "inverse-surface": "#d4e4fa",
+                        "surface-container-highest": "#273647",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-tertiary-container": "#1f2a3c",
+                        "tertiary": "#bcc7de",
+                        "surface-dim": "#051424",
+                        "on-tertiary": "#263143",
+                        "secondary-container": "#3f465c",
+                        "secondary": "#bec6e0",
+                        "on-surface": "#d4e4fa",
+                        "success-emerald": "#10B981",
+                        "surface-container": "#122131",
+                        "surface-container-lowest": "#010f1f",
+                        "outline-variant": "#424754",
+                        "primary-container": "#4d8eff",
+                        "on-primary": "#002e6a",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-error": "#690005",
+                        "data-cyan": "#06B6D4",
+                        "inverse-primary": "#005ac2",
+                        "surface-variant": "#273647",
+                        "on-tertiary-fixed": "#111c2d",
+                        "on-secondary": "#283044",
+                        "on-tertiary-fixed-variant": "#3c475a",
+                        "on-primary-fixed": "#001a42",
+                        "surface-tint": "#adc6ff",
+                        "outline": "#8c909f",
+                        "on-surface-variant": "#c2c6d6",
+                        "tertiary-container": "#8691a7",
+                        "surface-container-high": "#1c2b3c",
+                        "on-secondary-container": "#adb4ce",
+                        "secondary-fixed": "#dae2fd",
+                        "background": "#051424",
+                        "primary": "#adc6ff",
+                        "on-primary-fixed-variant": "#004395",
+                        "inverse-on-surface": "#233143",
+                        "surface-bright": "#2c3a4c",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#adc6ff",
+                        "tertiary-fixed-dim": "#bcc7de",
+                        "surface-deep": "#020617",
+                        "surface": "#051424",
+                        "border-subtle": "#1E293B",
+                        "surface-container-low": "#0d1c2d",
+                        "on-primary-container": "#00285d",
+                        "tertiary-fixed": "#d8e3fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "caption": ["Inter"],
+                        "display-hero": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-mono": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden dot-pattern">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant h-20">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-full">
+<a class="font-headline-md text-[20px] md:text-headline-md font-bold text-on-surface truncate pr-4" href="index.html">Nexus Data Collective</a>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="services.html">Services</a>
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1" href="portfolio.html">Portfolio</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="about_us.html">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="pricing.html">Pricing</a>
+</div>
+<a class="hidden md:inline-flex bg-primary text-on-primary px-4 md:px-6 py-2 text-sm md:text-base font-bold transition-all duration-100 rounded-lg whitespace-nowrap" href="pricing.html#contact">Consult</a>
+<button aria-label="Toggle menu" class="md:hidden p-2 text-on-surface" id="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<div class="fixed inset-0 z-[60] bg-surface-container-lowest translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-menu">
+<div class="flex flex-col h-full p-8">
+<div class="flex justify-between items-center mb-12">
+<a class="font-bold text-lg text-on-surface" href="index.html">Nexus Data Collective</a>
+<button aria-label="Close menu" class="p-2 text-on-surface" id="menu-close">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-8 text-2xl font-semibold">
+<a class="text-on-surface" href="index.html">Home</a>
+<a class="text-on-surface" href="services.html">Services</a>
+<a class="text-primary" href="portfolio.html">Portfolio</a>
+<a class="text-on-surface" href="about_us.html">About</a>
+<a class="text-on-surface" href="pricing.html">Pricing</a>
+</div>
+<div class="mt-auto">
+<a class="block w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-center" href="pricing.html#contact">Book Consultation</a>
+</div>
+</div>
+</div>
+<main class="pt-24 md:pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header Section -->
+<header class="mb-16 md:mb-section-gap text-center md:text-left">
+<span class="font-label-mono text-caption md:text-label-mono text-primary uppercase tracking-widest mb-stack-sm block">[ STRATEGIC INTELLIGENCE ]</span>
+<h1 class="font-display-hero text-headline-lg-mobile md:text-display-hero text-on-surface mb-stack-md leading-tight">Visualizing Complexity.</h1>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-2xl mx-auto md:mx-0">
+                A showcase of technical excellence in data engineering and advanced analytics. From raw pipelines to C-suite decision engines.
+            </p>
+</header>
+<!-- Filter Bar - Optimized for Mobile -->
+<div class="relative mb-stack-lg border-b border-border-subtle pb-stack-md">
+<div class="flex overflow-x-auto no-scrollbar gap-stack-md snap-x snap-mandatory">
+<button class="bg-primary text-on-primary px-4 py-1.5 font-label-mono text-caption md:text-label-mono rounded-lg transition-all whitespace-nowrap snap-start">ALL PROJECTS</button>
+<button class="border border-border-subtle text-on-surface-variant px-4 py-1.5 font-label-mono text-caption md:text-label-mono rounded-lg hover:border-primary transition-all whitespace-nowrap snap-start">POWER BI</button>
+<button class="border border-border-subtle text-on-surface-variant px-4 py-1.5 font-label-mono text-caption md:text-label-mono rounded-lg hover:border-primary transition-all whitespace-nowrap snap-start">TABLEAU</button>
+<button class="border border-border-subtle text-on-surface-variant px-4 py-1.5 font-label-mono text-caption md:text-label-mono rounded-lg hover:border-primary transition-all whitespace-nowrap snap-start">SQL</button>
+<button class="border border-border-subtle text-on-surface-variant px-4 py-1.5 font-label-mono text-caption md:text-label-mono rounded-lg hover:border-primary transition-all whitespace-nowrap snap-start">PYTHON</button>
+<button class="border border-border-subtle text-on-surface-variant px-4 py-1.5 font-label-mono text-caption md:text-label-mono rounded-lg hover:border-primary transition-all whitespace-nowrap snap-start">AZURE</button>
+</div>
+</div>
+<!-- Portfolio Bento Grid - Stacked on Mobile -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg">
+<!-- Project 1: Featured -->
+<div class="md:col-span-8 group bg-surface-container border border-border-subtle overflow-hidden transition-all duration-300 hover:border-primary">
+<div class="relative h-64 md:h-96 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated dark-themed Power BI executive dashboard displaying complex financial logistics." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCMZSUKBL6iasMw87u_kTDR3AEd_MFW1OiJo-JoOh3r-uEyRXfjfI3FVj9b7cH_aDBbKoK0iSoSjmDwekR2KpOVesTKc0uVSGMdAlCviLoUYTJ1S-idCZmH2Iz2X4qSoMqq7AtxvNx_buoyxBS0wEBUYl0gI_LF6kU0EzYBEMqJddPF5U_g2OLrI7flK0Ok2YqZ7bM7jdgQjb3DDxjtURao80kSxbp2E7BYYseGlIv2SvfiU75VknJRW_-7ZgTtjPxJXcH_yjaKw')"></div>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded border border-border-subtle">
+<span class="font-label-mono text-caption md:text-label-mono text-primary">[ POWER BI ]</span>
+</div>
+</div>
+<div class="p-stack-md md:p-stack-lg">
+<div class="flex justify-between items-start mb-stack-md">
+<div>
+<h3 class="font-headline-md text-[24px] md:text-headline-md text-on-surface mb-2 leading-tight">Global Logistics Optimization Engine</h3>
+<div class="flex gap-2 mb-4">
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-label-mono text-caption text-on-surface-variant">SQL</span>
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-label-mono text-caption text-on-surface-variant">DAX</span>
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-label-mono text-caption text-on-surface-variant">AZURE</span>
+</div>
+</div>
+<a class="material-symbols-outlined text-primary hover:scale-110 transition-transform flex-shrink-0" href="services.html#bi">open_in_new</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md md:gap-stack-lg border-t border-border-subtle pt-stack-md">
+<div>
+<p class="font-label-mono text-caption text-primary mb-1 uppercase tracking-tighter">The Problem</p>
+<p class="text-on-surface-variant text-sm md:text-body-md leading-relaxed">Siloed supply chain data across 14 regions causing a 12% revenue leak in redundant shipping routes.</p>
+</div>
+<div>
+<p class="font-label-mono text-caption text-success-emerald mb-1 uppercase tracking-tighter">The Solution</p>
+<p class="text-on-surface-variant text-sm md:text-body-md leading-relaxed">Unified Snowflake warehouse feeding a real-time Power BI dashboard with automated route re-routing logic.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="md:col-span-4 group bg-surface-container border border-border-subtle overflow-hidden transition-all duration-300 hover:border-primary">
+<div class="relative h-56 md:h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A clean, minimalist Python-driven data visualization." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqlhPXM8ZmKjK_IiTH9XM0H3kcBUc6uRltzCrjrhVw6AF6HGKinvjzy2_iwrs5vXjTErAxStVGLyvje8plOXjZSjeYqUtDkOB_6FvcMKwydjJODNROXfeS7xO6jAS_j5EZSq5V_cUvpolLH2OY15mO7E9avC20UI29ZveVsTdd-axW371h2Ho9kKpX5KD7B0iKzRDFcXk7bMrY4encHUgkmjPmvlZ2tMyw-dXV38OHiYWBWlGKA_tDT5bTz7cHNIt7WfBlOwXfUw')"></div>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded border border-border-subtle">
+<span class="font-label-mono text-caption md:text-label-mono text-primary">[ PYTHON ]</span>
+</div>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md text-[22px] md:text-[24px] text-on-surface mb-2">Predictive Churn Analysis</h3>
+<p class="text-on-surface-variant text-sm md:text-body-md mb-4">Leveraging Scikit-learn and Pandas to identify high-risk accounts with 94% accuracy.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-label-mono text-caption text-on-surface-variant">PANDAS</span>
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-label-mono text-caption text-on-surface-variant">SCIKIT-LEARN</span>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="md:col-span-6 group bg-surface-container border border-border-subtle overflow-hidden transition-all duration-300 hover:border-primary">
+<div class="relative h-56 md:h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-density Tableau dashboard visualizing real-time stock market fluctuations." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiM0RSO8S_soNzdmO1Gzpb724yJJsWPrB40tocNdrARkd_bs7wERCUvB5tLOh9IRV5jO1KsQXSQr4BLMugjKgnr9lcvVhwQpnYO54IEyNShA8_XZmOlwwrJHyByYLiDJn4CgM9k1VW-scT3qhQopPLcqjo5dsT_8uB0Y1BbGKoqENugyN_5s0zES6tqLfqM_qBjgXNq-L5nlqt01r9WcwKgPKgrqw7E3_RpsJmHDVH5O-WzEPkZ0C1Z4gHwQj8eX_p2kLsS_OO_g')"></div>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded border border-border-subtle">
+<span class="font-label-mono text-caption md:text-label-mono text-primary">[ TABLEAU ]</span>
+</div>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md text-[22px] md:text-[24px] text-on-surface mb-2">Market Volatility Pulse</h3>
+<p class="text-on-surface-variant text-sm md:text-body-md mb-stack-md">Sub-second latency visualization of derivatives market liquidity using Tableau Hyper.</p>
+<div class="flex justify-between items-center">
+<div class="flex gap-2">
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-label-mono text-caption text-on-surface-variant">SQL</span>
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-label-mono text-caption text-on-surface-variant">API</span>
+</div>
+<a class="font-label-mono text-caption md:text-label-mono text-primary hover:underline flex items-center gap-1" href="services.html#analytics">CASE STUDY <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="md:col-span-6 group bg-surface-container border border-border-subtle overflow-hidden transition-all duration-300 hover:border-primary">
+<div class="relative h-56 md:h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A clean data architecture diagram visualization." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDg26PfkhFTQfPqP9YqZK06BzuWyCB-za4MggJivVo_SxQ0ifW4615M4gZxlKOGJ9iThN61-ISOZvPCP6mEl85Fp4Y4sghcDcxfarZ6cktGQvJAhs_ePJiCXKA7AlzD-2E5d7rl0k8zyEJZChwBoLT5ZVCjuYdn0o2E20ZkMxduwApSs0iWRQhdz6yng6UdBXCbiKu_vZsYqdsJxZZmQj72tBrZ2u8ftOs6npvf3DRbkxeO6I4lUcLsNCzbYEx4kstmnon6HJbuXA')"></div>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded border border-border-subtle">
+<span class="font-label-mono text-caption md:text-label-mono text-primary">[ SQL ]</span>
+</div>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md text-[22px] md:text-[24px] text-on-surface mb-2">Enterprise ETL Pipeline</h3>
+<p class="text-on-surface-variant text-sm md:text-body-md mb-stack-md">Advanced dbt modeling and PostgreSQL optimization for a multi-tenant SaaS provider.</p>
+<div class="flex justify-between items-center">
+<div class="flex gap-2">
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-label-mono text-caption text-on-surface-variant">DBT</span>
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-label-mono text-caption text-on-surface-variant">AIRFLOW</span>
+</div>
+<a class="font-label-mono text-caption md:text-label-mono text-primary hover:underline flex items-center gap-1" href="services.html#engineering">DETAILS <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<section class="mt-24 md:mt-section-gap bg-surface-container border border-border-subtle p-stack-lg text-center relative overflow-hidden rounded-xl md:rounded-none">
+<div class="relative z-10 py-stack-md md:py-stack-lg px-4">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-md leading-tight">Ready to unlock your data's potential?</h2>
+<p class="text-body-md md:text-body-lg text-on-surface-variant max-w-xl mx-auto mb-stack-lg">
+                    We translate complex data architectures into strategic visual narratives that drive corporate growth.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 font-bold text-lg rounded-lg transition-all hover:brightness-110 inline-block" href="pricing.html#contact">Launch Your Project</a>
+<a class="border border-primary text-primary px-8 py-4 font-bold text-lg rounded-lg transition-all hover:bg-primary/10 inline-block" href="services.html">Capabilities Deck</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-stack-lg px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-4">Nexus Data Collective</div>
+<p class="font-caption text-caption text-on-surface-variant leading-relaxed">
+                    Engineering clarity from chaos. Nexus provides elite data solutions for the world's most ambitious firms.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-1 gap-8 md:col-span-3 lg:grid-cols-3">
+<div>
+<h4 class="text-primary font-bold mb-4 uppercase tracking-tighter text-sm">Services</h4>
+<ul class="space-y-2">
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="services.html#engineering">Data Engineering</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="services.html#bi">BI Development</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="services.html#analytics">Advanced Analytics</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-primary font-bold mb-4 uppercase tracking-tighter text-sm">Connect</h4>
+<ul class="space-y-2">
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/">LinkedIn</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="https://twitter.com/">Twitter</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/">GitHub</a></li>
+</ul>
+</div>
+<div class="col-span-2 lg:col-span-1">
+<h4 class="text-primary font-bold mb-4 uppercase tracking-tighter text-sm">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="about_us.html">Privacy Policy</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop py-8 border-t border-border-subtle max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-caption text-caption text-on-surface-variant text-center md:text-left">© 2024 Nexus Data Collective. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">database</span>
+<span class="material-symbols-outlined text-on-surface-variant text-xl">query_stats</span>
+<span class="material-symbols-outlined text-on-surface-variant text-xl">terminal</span>
+</div>
+</div>
+</footer>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuToggle && menuClose && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.classList.add('overflow-hidden');
+            });
+
+            menuClose.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                    document.body.classList.remove('overflow-hidden');
+                });
+            });
+        }
+
+        // Micro-interaction for project cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.borderColor = '#adc6ff';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.borderColor = '#1E293B';
+            });
+        });
+
+        // Simple scroll parallax for header - disabled on small screens for performance
+        if (window.innerWidth > 768) {
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                const scrolled = window.pageYOffset;
+                header.style.transform = `translateY(${scrolled * 0.15}px)`;
+                header.style.opacity = 1 - (scrolled / 500);
+            });
+        }
+    </script>
+</body></html>

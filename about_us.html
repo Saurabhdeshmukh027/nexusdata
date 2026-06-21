@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Nexus Data Collective</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .dot-grid {
+            background-image: radial-gradient(circle, #334155 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#d4e4fa",
+                        "inverse-surface": "#d4e4fa",
+                        "surface-container-highest": "#273647",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-tertiary-container": "#1f2a3c",
+                        "tertiary": "#bcc7de",
+                        "surface-dim": "#051424",
+                        "on-tertiary": "#263143",
+                        "secondary-container": "#3f465c",
+                        "secondary": "#bec6e0",
+                        "on-surface": "#d4e4fa",
+                        "success-emerald": "#10B981",
+                        "surface-container": "#122131",
+                        "surface-container-lowest": "#010f1f",
+                        "outline-variant": "#424754",
+                        "primary-container": "#4d8eff",
+                        "on-primary": "#002e6a",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-error": "#690005",
+                        "data-cyan": "#06B6D4",
+                        "inverse-primary": "#005ac2",
+                        "surface-variant": "#273647",
+                        "on-tertiary-fixed": "#111c2d",
+                        "on-secondary": "#283044",
+                        "on-tertiary-fixed-variant": "#3c475a",
+                        "on-primary-fixed": "#001a42",
+                        "surface-tint": "#adc6ff",
+                        "outline": "#8c909f",
+                        "on-surface-variant": "#c2c6d6",
+                        "tertiary-container": "#8691a7",
+                        "surface-container-high": "#1c2b3c",
+                        "on-secondary-container": "#adb4ce",
+                        "secondary-fixed": "#dae2fd",
+                        "background": "#051424",
+                        "primary": "#adc6ff",
+                        "on-primary-fixed-variant": "#004395",
+                        "inverse-on-surface": "#233143",
+                        "surface-bright": "#2c3a4c",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#adc6ff",
+                        "tertiary-fixed-dim": "#bcc7de",
+                        "surface-deep": "#020617",
+                        "surface": "#051424",
+                        "border-subtle": "#1E293B",
+                        "surface-container-low": "#0d1c2d",
+                        "on-primary-container": "#00285d",
+                        "tertiary-fixed": "#d8e3fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "caption": ["Inter"],
+                        "display-hero": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-mono": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30 font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant h-20">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-full">
+<a class="font-headline-md text-[20px] md:text-headline-md font-bold text-on-surface tracking-tighter truncate mr-4" href="index.html">
+                Nexus Data Collective
+            </a>
+<div class="hidden lg:flex items-center gap-stack-lg">
+<a class="font-body-md text-body-md transition-colors duration-200 hover:text-primary text-on-surface-variant" href="index.html">Home</a>
+<a class="font-body-md text-body-md transition-colors duration-200 hover:text-primary text-on-surface-variant" href="services.html">Services</a>
+<a class="font-body-md text-body-md transition-colors duration-200 hover:text-primary text-on-surface-variant" href="portfolio.html">Portfolio</a>
+<a class="font-body-md text-body-md transition-colors duration-200 hover:text-primary text-primary border-b-2 border-primary pb-1" href="about_us.html">About</a>
+<a class="font-body-md text-body-md transition-colors duration-200 hover:text-primary text-on-surface-variant" href="pricing.html">Pricing</a>
+</div>
+<a class="hidden lg:inline-flex bg-primary text-on-primary px-4 md:px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-all text-sm md:text-base whitespace-nowrap" href="pricing.html#contact">
+                Consultation
+            </a>
+<button aria-label="Toggle menu" class="lg:hidden p-2 text-on-surface" id="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<div class="fixed inset-0 z-[60] bg-surface-container-lowest translate-x-full transition-transform duration-300 ease-in-out lg:hidden" id="mobile-menu">
+<div class="flex flex-col h-full p-8">
+<div class="flex justify-between items-center mb-12">
+<a class="font-bold text-lg text-on-surface" href="index.html">Nexus Data Collective</a>
+<button aria-label="Close menu" class="p-2 text-on-surface" id="menu-close">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-8 text-2xl font-semibold">
+<a class="text-on-surface" href="index.html">Home</a>
+<a class="text-on-surface" href="services.html">Services</a>
+<a class="text-on-surface" href="portfolio.html">Portfolio</a>
+<a class="text-primary" href="about_us.html">About</a>
+<a class="text-on-surface" href="pricing.html">Pricing</a>
+</div>
+<div class="mt-auto">
+<a class="block w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-center" href="pricing.html#contact">Book Consultation</a>
+</div>
+</div>
+</div>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-auto md:min-h-[614px] flex items-center overflow-hidden py-16 md:py-section-gap">
+<div class="absolute inset-0 dot-grid opacity-20 pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 grid md:grid-cols-2 gap-stack-lg items-center">
+<div class="text-left">
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-widest mb-stack-md block">[ CORPORATE IDENTITY ]</span>
+<h1 class="font-display-hero text-headline-lg-mobile md:text-display-hero text-on-surface mb-stack-md leading-tight">Engineering the <span class="text-primary">Data Frontier.</span></h1>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-xl">
+                        Nexus Data Collective is a strategic partner for high-growth enterprises, delivering surgical-grade data architecture and AI implementation with uncompromising technical depth.
+                    </p>
+</div>
+<div class="relative group mt-8 md:mt-0">
+<div class="absolute -inset-4 bg-primary/10 rounded-xl blur-3xl group-hover:bg-primary/20 transition-all duration-700"></div>
+<div class="relative bg-surface-container border border-border-subtle p-stack-sm rounded-xl overflow-hidden aspect-video md:aspect-square">
+<img class="w-full h-full object-cover rounded-lg filter brightness-75" data-alt="A highly professional architectural shot of a sleek, dark-themed corporate headquarters lobby with glass walls, blue atmospheric lighting, and minimalist digital displays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWNKVnDZUHCeEu-rPx9JAL_LwQbk8OBEAFxXKDSckoMd96x5Fzh93qrfAjIeplZoU6Q8itF-wHapgphIdGuIn1IN8Br4BDJ3Bpiki3xigtVlU9Hs05n6XK8SiJEUyTvEQmSEqK-mwIRgrYDzFE9dMhJBhl_MDVjYVg80r53-5XZduIi_xLw6_E2vYaPZ1AdhETKpLr0ld-k5nS23-N0YpWaBWNsrXYl_GA3kzvJ5EAUbTkQoOelaOJ2aqCV-EG1foCzMzHcbPqkg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Story Section -->
+<section class="py-16 md:py-section-gap bg-surface-deep relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-stack-lg">Our Story</h2>
+<div class="space-y-stack-md text-on-surface-variant">
+<p>Founded in 2018, Nexus Data Collective emerged from a simple realization: the gap between "data science" and "business impact" was widening into a chasm.</p>
+<p>While most firms focused on flashy dashboards, we went deep into the plumbing—the pipelines, the architecture, and the structural integrity of organizational data.</p>
+<p>Today, we operate as a precision unit of engineers and strategists, treating every data point as a critical asset and every client mission as a high-stakes engineering challenge.</p>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 mt-12 md:mt-0">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-md">
+<div class="bg-surface-container border border-border-subtle p-stack-lg">
+<div class="text-primary font-display-hero text-headline-md md:text-headline-lg mb-2">500+</div>
+<div class="font-label-mono text-caption md:text-label-mono text-on-surface-variant">DATA PIPELINES DEPLOYED</div>
+</div>
+<div class="bg-surface-container border border-border-subtle p-stack-lg">
+<div class="text-data-cyan font-display-hero text-headline-md md:text-headline-lg mb-2">99.9%</div>
+<div class="font-label-mono text-caption md:text-label-mono text-on-surface-variant">ARCHITECTURE UPTIME</div>
+</div>
+<div class="bg-surface-container border border-border-subtle p-stack-lg">
+<div class="text-primary font-display-hero text-headline-md md:text-headline-lg mb-2">12ms</div>
+<div class="font-label-mono text-caption md:text-label-mono text-on-surface-variant">AVG QUERY LATENCY</div>
+</div>
+<div class="bg-surface-container border border-border-subtle p-stack-lg">
+<div class="text-data-cyan font-display-hero text-headline-md md:text-headline-lg mb-2">$400M</div>
+<div class="font-label-mono text-caption md:text-label-mono text-on-surface-variant">CLIENT VALUE UNLOCKED</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision: Bento Grid -->
+<section class="py-16 md:py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter md:auto-rows-[300px]">
+<div class="md:col-span-2 bg-surface-container-high border border-border-subtle p-stack-lg flex flex-col justify-end relative overflow-hidden group min-h-[250px]">
+<div class="absolute top-0 right-0 p-stack-lg opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[80px] md:text-[120px]">rocket_launch</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary mb-stack-sm">[ THE MISSION ]</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Democratizing Technical Precision</h3>
+<p class="text-on-surface-variant max-w-md">Our mission is to empower organizations by building high-fidelity data foundations. We don't just build systems; we build clarity.</p>
+</div>
+<div class="bg-surface-container border border-border-subtle p-stack-lg flex flex-col justify-between min-h-[200px]">
+<span class="material-symbols-outlined text-primary text-4xl">visibility</span>
+<div>
+<span class="font-label-mono text-label-mono text-data-cyan mb-stack-sm">[ THE VISION ]</span>
+<h3 class="font-headline-md text-headline-md text-on-surface leading-tight">Reliability comparable to the power grid.</h3>
+</div>
+</div>
+<div class="bg-primary-container text-on-primary-container p-stack-lg flex flex-col justify-center items-center text-center min-h-[200px]">
+<h4 class="font-headline-md text-headline-md font-bold mb-stack-sm">Technical Depth</h4>
+<p class="font-body-md">We hire the top 1% specializing in distributed systems and LLM infrastructure.</p>
+</div>
+<div class="md:col-span-2 bg-surface-container-lowest border border-border-subtle p-0 overflow-hidden relative min-h-[250px]">
+<img class="w-full h-full object-cover opacity-50" data-alt="Advanced server farm motherboard with glowing blue highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC590GQCGRjhSxFsaa0mMhymhvtAu5jbN3O5lkXCFpnr_1wu52sGgbEdfQvo6sjf0fluMdBaeQy84SdGKCxYRGs1SDDrNKSknre7I5wFTOjAk12yz6FLThsEWutx8SYRmszvQmjriz0NbkiwQ549Pltxanltl3PBftJ_gi4RdBZMyUFPMoIQ69DcXK5sH4MG-5s9L2l3npInwcaiiqRJGjaFfmrqCcpP734A1Pb2-j--bJF0nRI50mBBIt6Orqh05mDrkH3w2ePag"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-deep via-transparent to-transparent flex flex-col justify-end p-stack-lg">
+<h4 class="font-headline-md text-headline-md text-on-surface">Precision by Design</h4>
+<p class="text-on-surface-variant">Prioritizing performance over hype.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Founder Profile -->
+<section class="py-16 md:py-section-gap bg-surface-container-low border-y border-border-subtle">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center gap-12 md:gap-section-gap">
+<div class="w-full md:w-1/3 aspect-[3/4] relative">
+<div class="absolute inset-0 border border-primary/30 translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4"></div>
+<img class="w-full h-full object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Marcus Thorne, Founder &amp; Chief Architect headshot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAinYViA5FDLyn-IR21n2byns_6FnHoodkSoNDN0JhPIHaEtWfUoVdKE_zYOFP_acPYEU85ls84HtfXH7P7cEuEtysDyTs6Zfn_B34GZfLiWvgbFtu9VJxq7ba9Yau5uRIRTCbPjpMXRIVBNIvXectsxv7uRE8yw6b7stFL4cnLtVoVtw3wVYfmkxWgmGrA4NoQyFlsEd4e7uwP5KjABn4Meuh1qdxDyw1asuef4d7OjywydIcA7BsWo1hsD-A5VUaZzPn1EiBI-w"/>
+</div>
+<div class="w-full md:w-2/3 text-left">
+<span class="font-label-mono text-label-mono text-primary mb-stack-sm">[ LEADERSHIP ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">Marcus Thorne</h2>
+<h3 class="text-on-surface-variant font-body-lg mb-stack-lg">Founder &amp; Chief Architect</h3>
+<div class="space-y-stack-md text-on-surface-variant border-l border-primary/30 pl-stack-lg">
+<p class="italic text-lg">"In the age of AI, your competitive advantage isn't the model you use—it's the data that feeds it. We exist to make that data your most powerful weapon."</p>
+<p>Marcus founded Nexus to bring hyperscale engineering practices to the enterprise mid-market. He is a published author on data governance and holds three patents in real-time stream processing.</p>
+<div class="flex flex-wrap gap-stack-md pt-stack-md">
+<a class="text-primary hover:underline font-label-mono" href="https://www.linkedin.com/">LINKEDIN →</a>
+<a class="text-primary hover:underline font-label-mono" href="portfolio.html">TECH REVIEWS →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-16 md:py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-12 md:mb-stack-lg">
+<span class="font-label-mono text-label-mono text-data-cyan mb-stack-sm">[ DIFFERENTIATORS ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">The Nexus Advantage</h2>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-stack-md md:gap-gutter">
+<!-- Speed -->
+<div class="p-stack-lg bg-surface border border-border-subtle group hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center mb-stack-lg rounded">
+<span class="material-symbols-outlined text-primary">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Velocity</h3>
+<p class="text-on-surface-variant">Deploy architecture 40% faster than industry averages without compromising stability or security.</p>
+</div>
+<!-- Technical Depth -->
+<div class="p-stack-lg bg-surface border border-border-subtle group hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center mb-stack-lg rounded">
+<span class="material-symbols-outlined text-primary">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Deep Logic</h3>
+<p class="text-on-surface-variant">Hands-on-keyboard experts capable of debugging kernel-level bottlenecks or global schemas.</p>
+</div>
+<!-- Impact -->
+<div class="p-stack-lg bg-surface border border-border-subtle group hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center mb-stack-lg rounded">
+<span class="material-symbols-outlined text-primary">insights</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Impact ROI</h3>
+<p class="text-on-surface-variant">We measure success in P&amp;L impact. Data architecture must lead to measurable revenue growth.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-12 md:py-section-gap relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-surface-container-highest p-12 md:p-section-gap text-center relative overflow-hidden">
+<div class="absolute inset-0 dot-grid opacity-10"></div>
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-stack-lg">Solidify your data strategy</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto mb-stack-lg">Join the collective of forward-thinking leaders who refuse to settle for mediocre data foundations.</p>
+<div class="flex flex-col sm:flex-row gap-stack-md justify-center items-stretch sm:items-center">
+<a class="bg-primary text-on-primary px-8 py-4 rounded font-bold hover:bg-primary/90 transition-all inline-block" href="pricing.html#contact">Book Consultation</a>
+<a class="border border-primary text-primary px-8 py-4 rounded font-bold hover:bg-primary/10 transition-all inline-block" href="portfolio.html">Download PDF</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-stack-lg px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-stack-md">Nexus Data Collective</div>
+<p class="text-caption font-caption text-on-surface-variant">Engineering excellence for the data-driven world. Strategic results through technical precision.</p>
+</div>
+<div>
+<h4 class="font-label-mono text-label-mono text-on-surface mb-stack-md uppercase">Ecosystem</h4>
+<ul class="space-y-stack-sm text-caption font-caption">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="services.html">Services</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="portfolio.html">Portfolio</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about_us.html">About</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-mono text-label-mono text-on-surface mb-stack-md uppercase">Resources</h4>
+<ul class="space-y-stack-sm text-caption font-caption">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about_us.html">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="services.html">Documentation</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-mono text-label-mono text-on-surface mb-stack-md uppercase">Contact</h4>
+<ul class="space-y-stack-sm text-caption font-caption">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/">LinkedIn</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="https://twitter.com/">Twitter</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:hello@nexusdatacollective.com">Email Us</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md border-t border-outline-variant/30 text-center">
+<p class="text-caption font-caption text-on-surface-variant">© 2024 Nexus Data Collective. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuToggle && menuClose && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.classList.add('overflow-hidden');
+            });
+
+            menuClose.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                    document.body.classList.remove('overflow-hidden');
+                });
+            });
+        }
+
+        // Subtle interaction script for dot grid movement
+        document.addEventListener('mousemove', (e) => {
+            if (window.innerWidth > 768) {
+                const grids = document.querySelectorAll('.dot-grid');
+                const moveX = (e.clientX / window.innerWidth - 0.5) * 20;
+                const moveY = (e.clientY / window.innerHeight - 0.5) * 20;
+                
+                grids.forEach(grid => {
+                    grid.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                });
+            }
+        });
+    </script>
+</body></html>

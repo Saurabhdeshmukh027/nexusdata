@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pricing &amp; Contact | Nexus Data Collective</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-error-container": "#ffdad6",
+                "on-background": "#d4e4fa",
+                "inverse-surface": "#d4e4fa",
+                "surface-container-highest": "#273647",
+                "on-secondary-fixed-variant": "#3f465c",
+                "on-tertiary-container": "#1f2a3c",
+                "tertiary": "#bcc7de",
+                "surface-dim": "#051424",
+                "on-tertiary": "#263143",
+                "secondary-container": "#3f465c",
+                "secondary": "#bec6e0",
+                "on-surface": "#d4e4fa",
+                "success-emerald": "#10B981",
+                "surface-container": "#122131",
+                "surface-container-lowest": "#010f1f",
+                "outline-variant": "#424754",
+                "primary-container": "#4d8eff",
+                "on-primary": "#002e6a",
+                "error": "#ffb4ab",
+                "secondary-fixed-dim": "#bec6e0",
+                "primary-fixed": "#d8e2ff",
+                "on-secondary-fixed": "#131b2e",
+                "on-error": "#690005",
+                "data-cyan": "#06B6D4",
+                "inverse-primary": "#005ac2",
+                "surface-variant": "#273647",
+                "on-tertiary-fixed": "#111t2d",
+                "on-secondary": "#283044",
+                "on-tertiary-fixed-variant": "#3c475a",
+                "on-primary-fixed": "#001a42",
+                "surface-tint": "#adc6ff",
+                "outline": "#8c909f",
+                "on-surface-variant": "#c2c6d6",
+                "tertiary-container": "#8691a7",
+                "surface-container-high": "#1c2b3c",
+                "on-secondary-container": "#adb4ce",
+                "secondary-fixed": "#dae2fd",
+                "background": "#051424",
+                "primary": "#adc6ff",
+                "on-primary-fixed-variant": "#004395",
+                "inverse-on-surface": "#233143",
+                "surface-bright": "#2c3a4c",
+                "error-container": "#93000a",
+                "primary-fixed-dim": "#adc6ff",
+                "tertiary-fixed-dim": "#bcc7de",
+                "surface-deep": "#020617",
+                "surface": "#051424",
+                "border-subtle": "#1E293B",
+                "surface-container-low": "#0d1c2d",
+                "on-primary-container": "#00285d",
+                "tertiary-fixed": "#d8e3fb"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "stack-lg": "32px",
+                "stack-md": "16px",
+                "container-max": "1280px",
+                "section-gap": "120px",
+                "stack-sm": "8px",
+                "margin-mobile": "20px",
+                "gutter": "24px",
+                "margin-desktop": "80px"
+            },
+            "fontFamily": {
+                "headline-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "label-mono": ["JetBrains Mono"],
+                "headline-lg-mobile": ["Inter"],
+                "caption": ["Inter"],
+                "display-hero": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "label-mono": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .data-grid-bg {
+            background-image: radial-gradient(#1E293B 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        @media (max-width: 768px) {
+            .mobile-padding {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant h-20">
+<div class="flex justify-between items-center px-4 md:px-margin-desktop max-w-container-max mx-auto h-full">
+<a class="font-headline-md text-xl md:text-headline-md font-bold text-on-surface truncate pr-4" href="index.html">Nexus Data Collective</a>
+<div class="hidden md:flex gap-stack-lg items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="services.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="portfolio.html">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="about_us.html">About</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-body-md text-body-md" href="pricing.html">Pricing</a>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:scale-95 transition-transform duration-100" href="#contact">Book Consultation</a>
+</div>
+<button aria-label="Toggle menu" class="md:hidden p-2 text-on-surface" id="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<div class="fixed inset-0 z-[60] bg-surface-container-lowest translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-menu">
+<div class="flex flex-col h-full p-8">
+<div class="flex justify-between items-center mb-12">
+<a class="font-bold text-lg text-on-surface" href="index.html">Nexus Data Collective</a>
+<button aria-label="Close menu" class="p-2 text-on-surface" id="menu-close">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-8 text-2xl font-semibold">
+<a class="text-on-surface" href="index.html">Home</a>
+<a class="text-on-surface" href="services.html">Services</a>
+<a class="text-on-surface" href="portfolio.html">Portfolio</a>
+<a class="text-on-surface" href="about_us.html">About</a>
+<a class="text-primary" href="pricing.html">Pricing</a>
+</div>
+<div class="mt-auto">
+<a class="block w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-center" href="#contact">Book Consultation</a>
+</div>
+</div>
+</div>
+<main class="relative pt-20 overflow-hidden">
+<!-- Pricing Hero Section -->
+<section class="relative px-4 md:px-margin-desktop pt-12 md:pt-24 pb-16 md:pb-section-gap max-w-container-max mx-auto">
+<div class="max-w-3xl">
+<span class="font-label-mono text-xs md:text-label-mono text-primary mb-stack-sm block uppercase tracking-widest">[ STRATEGIC INVESTMENT ]</span>
+<h1 class="font-display-hero text-4xl md:text-display-hero text-on-surface mb-stack-md leading-[1.1]">Engineered Excellence for Data Infrastructure.</h1>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed">
+                    Transparent, value-driven pricing designed for enterprises scaling their data capabilities. No hidden costs—just pure technical authority.
+                </p>
+</div>
+<!-- Pricing Tiers -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-stack-lg mt-12 md:mt-24">
+<!-- Data Audit -->
+<div class="bg-surface-container border border-border-subtle p-6 md:p-10 rounded-lg group hover:border-primary transition-colors duration-300">
+<div class="mb-stack-lg">
+<span class="font-label-mono text-xs md:text-label-mono text-on-surface-variant bg-surface-container-highest px-3 py-1 rounded">[ DATA ENGINEERING ]</span>
+</div>
+<h3 class="font-headline-md text-2xl md:text-headline-md text-on-surface mb-stack-sm">Data Audit</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg min-h-[4rem]">Identify bottlenecks, security risks, and optimization opportunities in your current stack.</p>
+<div class="flex items-baseline gap-2 mb-stack-lg">
+<span class="font-headline-lg text-3xl md:text-headline-lg text-on-surface">₹20,000</span>
+<span class="font-label-mono text-caption text-on-surface-variant">/ STARTING</span>
+</div>
+<ul class="space-y-4 mb-stack-lg">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Security Vulnerability Mapping</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Pipeline Latency Analysis</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Scalability Assessment</span>
+</li>
+</ul>
+<a class="w-full border border-primary text-primary py-4 rounded font-bold hover:bg-primary/5 transition-all active:scale-[0.98] block text-center" href="services.html#engineering">Download Sample Audit</a>
+</div>
+<!-- Dashboard Development -->
+<div class="bg-surface-container-high border-2 border-primary p-6 md:p-10 rounded-lg relative overflow-hidden group shadow-2xl">
+<div class="absolute top-0 right-0 bg-primary text-on-primary font-label-mono text-[10px] px-4 py-1 uppercase tracking-tighter">Recommended</div>
+<div class="mb-stack-lg">
+<span class="font-label-mono text-xs md:text-label-mono text-primary bg-primary/10 px-3 py-1 rounded">[ VISUAL INTELLIGENCE ]</span>
+</div>
+<h3 class="font-headline-md text-2xl md:text-headline-md text-on-surface mb-stack-sm">Dashboard Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg min-h-[4rem]">Custom, real-time analytics interfaces designed for executive decision-making.</p>
+<div class="flex items-baseline gap-2 mb-stack-lg">
+<span class="font-headline-lg text-3xl md:text-headline-lg text-on-surface">₹40,000</span>
+<span class="font-label-mono text-caption text-on-surface-variant">/ STARTING</span>
+</div>
+<ul class="space-y-4 mb-stack-lg">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Real-time Data Streaming</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Interactive Visual Nodes</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Role-based Access Control</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Custom API Integration</span>
+</li>
+</ul>
+<a class="w-full bg-primary text-on-primary py-4 rounded font-bold hover:scale-[0.98] transition-transform active:scale-95 block text-center" href="#contact">Initiate Development</a>
+</div>
+<!-- Monthly Support -->
+<div class="bg-surface-container border border-border-subtle p-6 md:p-10 rounded-lg group hover:border-primary transition-colors duration-300">
+<div class="mb-stack-lg">
+<span class="font-label-mono text-xs md:text-label-mono text-on-surface-variant bg-surface-container-highest px-3 py-1 rounded">[ MAINTENANCE ]</span>
+</div>
+<h3 class="font-headline-md text-2xl md:text-headline-md text-on-surface mb-stack-sm">Monthly Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg min-h-[4rem]">24/7 infrastructure monitoring, pipeline optimization, and on-demand expert consulting.</p>
+<div class="flex items-baseline gap-2 mb-stack-lg">
+<span class="font-headline-lg text-3xl md:text-headline-lg text-on-surface">₹55,000</span>
+<span class="font-label-mono text-caption text-on-surface-variant">/ STARTING</span>
+</div>
+<ul class="space-y-4 mb-stack-lg">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Priority Response SLA</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">System Performance Tuning</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Data Governance Updates</span>
+</li>
+</ul>
+<a class="w-full border border-primary text-primary py-4 rounded font-bold hover:bg-primary/5 transition-all active:scale-[0.98] block text-center" href="#contact">View SLA Details</a>
+</div>
+</div>
+</section>
+<!-- Lead Generation & Calendar Section -->
+<section class="bg-surface-deep relative px-4 md:px-margin-desktop py-16 md:py-section-gap border-y border-outline-variant scroll-mt-24 md:scroll-mt-28" id="contact">
+<div class="data-grid-bg absolute inset-0 opacity-10"></div>
+<div class="relative max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+<!-- Contact Form -->
+<div>
+<h2 class="font-headline-lg text-3xl md:text-headline-lg text-on-surface mb-stack-md">Initiate Project.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">Our architects will review your requirements and provide a preliminary scope within 24 business hours.</p>
+<form class="space-y-6" id="lead-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+<div class="space-y-2">
+<label class="font-label-mono text-caption text-primary uppercase">Name</label>
+<input autocomplete="name" class="w-full bg-surface-container-low border border-border-subtle rounded p-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary/20 outline-none transition-all placeholder:text-outline-variant text-base" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-mono text-caption text-primary uppercase">Company</label>
+<input autocomplete="organization" class="w-full bg-surface-container-low border border-border-subtle rounded p-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary/20 outline-none transition-all placeholder:text-outline-variant text-base" placeholder="Nexus Dynamics" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-mono text-caption text-primary uppercase">Email Address</label>
+<input autocomplete="email" class="w-full bg-surface-container-low border border-border-subtle rounded p-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary/20 outline-none transition-all placeholder:text-outline-variant text-base" placeholder="john@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-mono text-caption text-primary uppercase">Project Description</label>
+<textarea class="w-full bg-surface-container-low border border-border-subtle rounded p-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary/20 outline-none transition-all placeholder:text-outline-variant resize-none text-base" placeholder="Briefly describe your data goals, challenges, and timeline..." rows="4"></textarea>
+</div>
+<button class="group w-full md:w-auto flex justify-center items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded font-bold hover:gap-5 transition-all active:scale-95" type="submit">
+                            Submit Inquiry
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Calendar Widget -->
+<div class="bg-surface-container border border-border-subtle rounded-xl p-4 md:p-8 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-5xl md:text-6xl mb-4 md:mb-6">calendar_today</span>
+<h3 class="font-headline-md text-2xl md:text-headline-md text-on-surface mb-stack-sm">Sync with an Architect</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 md:mb-10 max-w-sm">Prefer a direct conversation? Select a time slot that works for your team.</p>
+<!-- Calendar UI optimized for touch -->
+<div class="w-full bg-surface-deep rounded border border-border-subtle p-4 md:p-6">
+<div class="flex justify-between items-center mb-6 border-b border-border-subtle pb-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors p-2 -m-2">chevron_left</button>
+<span class="font-label-mono text-sm md:text-on-surface">OCTOBER 2024</span>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors p-2 -m-2">chevron_right</button>
+</div>
+<div class="grid grid-cols-7 gap-1 md:gap-2 mb-6">
+<span class="text-[10px] md:text-caption font-label-mono text-outline-variant">M</span>
+<span class="text-[10px] md:text-caption font-label-mono text-outline-variant">T</span>
+<span class="text-[10px] md:text-caption font-label-mono text-outline-variant">W</span>
+<span class="text-[10px] md:text-caption font-label-mono text-outline-variant">T</span>
+<span class="text-[10px] md:text-caption font-label-mono text-outline-variant">F</span>
+<span class="text-[10px] md:text-caption font-label-mono text-outline-variant">S</span>
+<span class="text-[10px] md:text-caption font-label-mono text-outline-variant">S</span>
+<div class="py-2 text-on-surface-variant">20</div>
+<div class="py-2 text-on-surface-variant">21</div>
+<div class="py-2 text-primary font-bold bg-primary/20 rounded-md">22</div>
+<div class="py-2 text-on-surface-variant">23</div>
+<div class="py-2 text-on-surface-variant">24</div>
+<div class="py-2 text-on-surface-variant/30">25</div>
+<div class="py-2 text-on-surface-variant/30">26</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<button class="border border-border-subtle py-3 rounded-lg font-label-mono text-xs md:text-caption hover:border-primary transition-colors active:bg-primary/5">10:00 AM IST</button>
+<button class="border border-border-subtle py-3 rounded-lg font-label-mono text-xs md:text-caption hover:border-primary transition-colors active:bg-primary/5">02:30 PM IST</button>
+</div>
+</div>
+<p class="mt-8 font-caption text-xs text-outline-variant">Sessions are approximately 45 minutes.</p>
+</div>
+</div>
+</section>
+<!-- Technical Credibility Image Section -->
+<section class="px-4 md:px-margin-desktop py-16 md:py-section-gap max-w-container-max mx-auto overflow-hidden">
+<div class="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden border border-border-subtle">
+<div class="bg-cover bg-center w-full h-full opacity-60" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAoCPOFnpsyX2XK7AlFOd7aRNzelTNH3b1iehoBa0Be8a0m5NnnWqzLM4Nrx7m1n2MbUr0gOO6oFG_GSAIpCNDpw2lv5QOFaS5zYCDL-2BrLNFJQWG10lPsHxAwWZgR7kP4eGt_lI6f_qruWgZE1_LNQlOgTBx81dwZlPeGzeIWiE9QCQnVT2-B-awHHQuPgFPVXccKah4vSUf4KBwirvw9mbfwot9FTPBJkxGgaSZ_4_IkjRPIBJpfNarNoj9nCC6AXrpUBHcaA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-6 md:bottom-12 left-6 md:left-12 max-w-md pr-6">
+<h4 class="font-headline-md text-xl md:text-headline-md text-on-surface mb-stack-sm">High-Precision Logistics.</h4>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant">Every line of code and every data pipeline is stress-tested to handle enterprise-level concurrency without failure.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-4 md:px-margin-desktop py-16 md:py-section-gap max-w-container-max mx-auto">
+<div class="space-y-6">
+<span class="font-headline-md text-xl font-bold text-on-surface">Nexus Data Collective</span>
+<p class="font-caption text-caption text-on-surface-variant leading-relaxed">The premier collective for strategic data engineering and visual analytics infrastructure.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-1 gap-8 md:contents">
+<div class="flex flex-col gap-4">
+<h5 class="font-label-mono text-xs text-primary uppercase tracking-widest">Solutions</h5>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="services.html#engineering">Data Engineering</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="services.html#bi">Visual Intelligence</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="services.html#analytics">Strategic Audits</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-mono text-xs text-primary uppercase tracking-widest">Legal</h5>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="about_us.html">Privacy Policy</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Terms of Service</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="services.html#engineering">Security Overview</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-mono text-xs text-primary uppercase tracking-widest">Connect</h5>
+<div class="flex md:flex-col gap-6 md:gap-4">
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/">LinkedIn</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="https://twitter.com/">Twitter</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/">GitHub</a>
+</div>
+</div>
+</div>
+<div class="px-4 md:px-margin-desktop py-8 border-t border-outline-variant max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<span class="font-caption text-xs text-on-surface-variant">© 2024 Nexus Data Collective. All rights reserved.</span>
+<span class="font-label-mono text-[10px] text-outline-variant uppercase tracking-widest">System Status: Optimal</span>
+</div>
+</footer>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuToggle && menuClose && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.classList.add('overflow-hidden');
+            });
+
+            menuClose.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                    document.body.classList.remove('overflow-hidden');
+                });
+            });
+        }
+
+        // Micro-interaction for form submission
+        document.getElementById('lead-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalHtml = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Sending...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined text-success-emerald">check_circle</span> Inquiry Received';
+                btn.classList.add('border-success-emerald', 'text-success-emerald');
+                btn.classList.remove('bg-primary', 'text-on-primary');
+            }, 1500);
+        });
+
+        // Simple mouse tracking for background depth (Desktop only)
+        if (window.innerWidth > 768) {
+            document.addEventListener('mousemove', (e) => {
+                const x = (e.clientX / window.innerWidth) - 0.5;
+                const y = (e.clientY / window.innerHeight) - 0.5;
+                const heroText = document.querySelector('h1');
+                if (heroText) {
+                    heroText.style.transform = `translate(${x * 20}px, ${y * 20}px)`;
+                }
+            });
+        }
+    </script>
+</body></html>
